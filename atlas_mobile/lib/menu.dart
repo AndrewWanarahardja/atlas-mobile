@@ -8,16 +8,16 @@ class MyHomePage extends StatelessWidget {
   final String kelas = "A"; //kelas
 
   final List<ItemHomepage> items = [
-    ItemHomepage("All Products", Icons.search, Colors.blue),
-    ItemHomepage("My Products", Icons.my_library_add, Colors.green),
-    ItemHomepage("Create Product", Icons.add, Colors.red),
+    ItemHomepage("All Products", Icons.all_inbox, Colors.blue),
+    ItemHomepage("My Products", Icons.my_library_books , Colors.green),
+    ItemHomepage("Create Product", Icons.my_library_add, Colors.red),
   ];
 
   @override
     Widget build(BuildContext context) {
         return Scaffold(
             appBar: AppBar(
-              // Judul aplikasi "Football News" dengan teks putih dan tebal.
+              // Judul aplikasi "Atlas" dengan teks putih dan tebal.
               title: const Text(
                 'Football News',
                 style: TextStyle(
