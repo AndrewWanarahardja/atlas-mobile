@@ -13,6 +13,7 @@ class MyHomePage extends StatelessWidget {
     ItemHomepage("All Products", Icons.all_inbox, Colors.blue),
     ItemHomepage("My Products", Icons.my_library_books , Colors.green),
     ItemHomepage("Create Product", Icons.my_library_add, Colors.red),
+    ItemHomepage("Logout", Icons.logout_sharp, Colors.purpleAccent)
   ];
 
   @override
@@ -21,7 +22,7 @@ class MyHomePage extends StatelessWidget {
             appBar: AppBar(
               // Judul aplikasi "Atlas" dengan teks putih dan tebal.
               title: const Text(
-                'Football News',
+                'Atlas',
                 style: TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
@@ -75,7 +76,7 @@ class MyHomePage extends StatelessWidget {
                           padding: const EdgeInsets.all(20),
                           crossAxisSpacing: 10,
                           mainAxisSpacing: 10,
-                          crossAxisCount: 3,
+                          crossAxisCount: 4,
                           // Agar grid menyesuaikan tinggi kontennya.
                           shrinkWrap: true,
 

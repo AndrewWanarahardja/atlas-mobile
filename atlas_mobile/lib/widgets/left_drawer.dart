@@ -2,6 +2,8 @@ import 'package:atlas_mobile/widgets/product_card.dart';
 import 'package:flutter/material.dart';
 import 'package:atlas_mobile/screens/menu.dart';
 import 'package:atlas_mobile/screens/productlist_form.dart';
+import 'package:atlas_mobile/screens/product_entry_list.dart';
+
 
 class LeftDrawer extends StatelessWidget {
   const LeftDrawer({super.key});
@@ -60,16 +62,17 @@ class LeftDrawer extends StatelessWidget {
                 builder: (context) => const ProductFormPage()));
             },
           ),
-          // ListTile(
-          //   leading: const Icon(Icons.show_chart_rounded),
-          //   title: const Text('Show Product'),
-          //   // Bagian redirection ke
-          //   onTap: () {
-          //     Navigator.pushReplacement(context, 
-          //     MaterialPageRoute(
-          //       builder: (context) => MyHomePage()));
-          //   },
-          // ),
+          ListTile(
+            leading: const Icon(Icons.show_chart_rounded),
+            title: const Text('Product List'),
+            onTap: () {
+                // Route to product list page
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const ProductEntryListPage()),
+                );
+            },
+        ),
         ],
       ),
     );
