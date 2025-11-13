@@ -2,6 +2,7 @@ import 'package:atlas_mobile/screens/productlist_form.dart';
 import 'package:flutter/material.dart';
 import 'package:atlas_mobile/screens/menu.dart';
 import 'package:atlas_mobile/screens/product_entry_list.dart';
+import 'package:atlas_mobile/screens/my_entry_list.dart';
 import 'package:atlas_mobile/screens/login.dart';
 import 'package:pbp_django_auth/pbp_django_auth.dart';
 import 'package:provider/provider.dart';
@@ -41,6 +42,13 @@ class ItemCard extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                       builder: (context) => const ProductEntryListPage()
+                  ),
+              );
+            } else if (item.name == "My Products") {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const MyEntryListPage()
                   ),
               );
             } else if (item.name == "Logout") {

@@ -61,7 +61,7 @@ class ProductEntryCard extends StatelessWidget {
                 const SizedBox(height: 6),
 
                 // Price
-                Text('Price: ${product.category}'),
+                Text('Price: ${product.price}'),
                 const SizedBox(height: 6),
 
                 // Content preview
