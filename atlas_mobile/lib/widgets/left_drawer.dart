@@ -1,3 +1,4 @@
+import 'package:atlas_mobile/screens/my_entry_list.dart';
 import 'package:atlas_mobile/widgets/product_card.dart';
 import 'package:flutter/material.dart';
 import 'package:atlas_mobile/screens/menu.dart';
@@ -63,8 +64,8 @@ class LeftDrawer extends StatelessWidget {
             },
           ),
           ListTile(
-            leading: const Icon(Icons.show_chart_rounded),
-            title: const Text('Product List'),
+            leading: const Icon(Icons.all_inbox),
+            title: const Text('List Produk'),
             onTap: () {
                 // Route to product list page
                 Navigator.push(
@@ -72,7 +73,18 @@ class LeftDrawer extends StatelessWidget {
                     MaterialPageRoute(builder: (context) => const ProductEntryListPage()),
                 );
             },
-        ),
+          ),
+          ListTile(
+            leading: const Icon(Icons.my_library_books),
+            title: const Text('My Products'),
+            onTap: () {
+                // Route to product list page
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const MyEntryListPage()),
+                );
+            },
+          ),
         ],
       ),
     );

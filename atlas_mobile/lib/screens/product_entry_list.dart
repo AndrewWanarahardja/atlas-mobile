@@ -1,3 +1,4 @@
+import 'package:atlas_mobile/screens/my_entry_list.dart';
 import 'package:flutter/material.dart';
 import 'package:atlas_mobile/models/product_entry.dart';
 import 'package:atlas_mobile/widgets/left_drawer.dart';
@@ -40,6 +41,18 @@ class _ProductEntryListPageState extends State<ProductEntryListPage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Product Entry List'),
+        actions: [
+          Padding(
+            padding: const EdgeInsets.only(right: 32),
+            child: TextButton.icon(
+              onPressed: () {
+                Navigator.push(context,MaterialPageRoute(
+                  builder: (context) => const MyEntryListPage()));
+              },
+              icon: const Icon(Icons.my_library_books), 
+              label: const Text("My Products"))
+          )
+        ]
       ),
       drawer: const LeftDrawer(),
       body: FutureBuilder(
